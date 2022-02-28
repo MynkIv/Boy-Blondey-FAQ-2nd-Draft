@@ -1,0 +1,105 @@
+@font-face {
+  src: url(fonts/GlamourAbsolute_Regular.otf);
+  font-family: nos;
+}
+
+h1 {
+  font-family: nos;
+  color: white;
+  padding: 15px;
+}
+.header {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.43);
+}
+
+.accordion {
+  /* margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  */
+  /* I was able to get the div container to center after using display:flex, 
+  flex direction: colmun.
+   */
+
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-btn {
+  display: block;
+  /*  I also had to change the width on the accordion content
+   and the accordion button to an equal width, in order for me to center 
+   everyhting in the middle of the page.
+   Setting the width to 50% rather than 100% is better because it takes up less space on the webpage.*/
+  width: 50%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+  background: rgba(161, 157, 159, 0.17);
+  color: black;
+}
+.accordion-btn::after {
+  content: "\25be";
+  float: right;
+  transform: scale(1.5);
+}
+
+.accordion-btn--active + .accordion-content {
+  display: block;
+}
+
+.accordion-btn--active {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+.accordion-btn--active::after {
+  content: "\25b4";
+}
+.accordion-content {
+  padding: 3px 15px;
+  font-family: nos;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: solid 1px white;
+  /*  I also had to change the width on the accordion content
+   and the accordion button to an equal width, in order for me to center 
+   everyhting in the middle of the page.
+   Setting the width to 50% rather than 100% is better because it takes up less space on the webpage.*/
+  width: 50%;
+  color: white;
+  display: none;
+  overflow: auto;
+}
+.social-media {
+  float: right;
+}
+.ig-icon {
+  margin-top: 15px;
+  margin-right: 7px;
+}
+.gmail {
+  margin-top: 17px;
+  margin-right: 15px;
+}
+.col {
+  padding: 0;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
